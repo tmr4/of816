@@ -18,6 +18,7 @@
           rep   #SHORT_A|SHORT_I
           lda   #$0300            ; direct page for Forth
           tcd
+.if 0 ; use bank 0
           lda   #.hiword($7000)   ; top of dictionary memory
           pha
           lda   #.loword($7000)
@@ -26,6 +27,16 @@
           pha
           lda   #.loword($0A00)
           pha
+.else ; use higher mem
+          lda   #.hiword($020000)   ; top of dictionary memory
+          pha
+          lda   #.loword($020000)
+          pha
+          lda   #.hiword($010000)   ; bottom of dictionary
+          pha
+          lda   #.loword($010000)
+          pha
+.endif
           lda   #$0300            ; first usable stack cell (relative to direct page)
           pha
           lda   #$0100            ; last usable stack cell+1 (relative to direct page)
