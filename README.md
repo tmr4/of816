@@ -1,5 +1,5 @@
 # NOTE about fork
-This fork creates a port of OF816 for [py65_65816](https://github.com/tmr4/py65_65816). For details see [platforms/py65816](https://github.com/tmr4/of816/tree/master/platforms/py65816) directory.
+This fork creates a port of OF816 for [py65_65816](https://github.com/tmr4/py65_65816). For details see [platforms/py65816](https://github.com/tmr4/of816/tree/master/platforms/py65816) directory.  This has been successfully tested in the [py65 65816 simulator](https://github.com/tmr4/py65_65816).
 
 # OF816
 OF816 is a [65C816](https://www.westerndesigncenter.com/wdc/w65c816s-chip.cfm)
